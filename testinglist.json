@@ -1,0 +1,24 @@
+{
+    "sites": [
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/",
+        "valid": "r.status_code == 200"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/",
+        "valid": "r.status_code == 200 and 'name\" content=' in responseContent"
+      },
+      {
+        "app": "Twitter",
+        "url": "https://nitter.net/",
+        "valid": "r.status_code == 200 and ') | nitter</title>' in responseContent"
+      },
+      {
+        "app": "Reddit",
+        "url": "https://www.reddit.com/user/{username}/about.json",
+      "valid": "response.status == 200 and 'total_karma' in responseContent"
+      }
+    ]
+}
