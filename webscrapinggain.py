@@ -3,10 +3,15 @@
 import requests
 import re
 import random
-import time
- 
+import time 
+
+
+R  = '\033[31m' # red
+G  = '\033[32m' # green
+
 def extractSource(username):
     useragents = open('useragents.txt').read().splitlines()
+
     with open('websitelist.txt') as f:
         for site in f:
           site = site.strip()
@@ -19,22 +24,12 @@ def extractSource(username):
           if r.status_code == 200:
             match = re.search(username, r.text)
             if match != "":
-              print("Account found on: " + site)
+              print(G +"Account found on: " + site+ G)
               time.sleep(3)
           elif r.status_code != 200:
-              print("Account not found on: " + site + "[Status Code: " + str(r.status_code) +"]")
+              print(R+"Account not found on: " + site + "[Status Code: " + str(r.status_code) +"]"+R)
               time.sleep(3)
               
-
-  
-def getData(body, site, username):
-  htmlSplit = body.split(" ")
-  print(htmlSplit)
-  time.sleep(5)
-  for x in htmlSplit:
-    x = x.strip()
-    if x == username:
-      print("Acount found on: " + site)
 
 def main():
   

@@ -1,7 +1,6 @@
 https://www.instagram.com/
 https://www.reddit.com/user/
 https://twitter.com/
-https://www.linkedin.com/in/
 https://www.tumblr.com/blog/
 https://www.youtube.com/
 https://www.deviantart.com/
@@ -17,4 +16,3 @@ https://github.com/
 https://www.twitch.tv/
 https://www.pinterest.com/
 https://www.facebook.com/
-https://www.tiktok.com/@
