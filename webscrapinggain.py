@@ -28,9 +28,9 @@ def parseHTML(request, username,site):
     if match != "":
         print(G +"Account found on: " + site+ G)
         time.sleep(3)
-    elif request.status_code != 200:
-        print(R+"Account not found on: " + site + "[Status Code: " + str(request.status_code) +"]"+R)
-        time.sleep(3)
+  elif request.status_code != 200:
+    print(R+"Account not found on: " + site + "[Status Code: " + str(request.status_code) +"]"+R)
+    time.sleep(3)
 
 def main():
   
